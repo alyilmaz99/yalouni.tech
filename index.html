@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YALO Selection</title>
+    <!-- Link to the external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles-start.css">
+</head>
+<body>
+    <center><div class="game-text">Choose a pill to continue...</div></center>
+    <center><img src="images/matrix.jpg" alt="Workplace" usemap="#workmap"></center>
+
+    <map name="workmap">
+        <area shape="rect" id="bluePill"  coords="115,310,134,331" alt="Blue Pill">
+        <area shape="rect" id="redPill"  coords="381,314,406,327" alt="Red Pill" href="starting_page.html">
+    </map>
+
+    <script>
+        
+        var bluePillLinks = [
+                "https://www.google.com"
+        ];
+
+        // Get a random link from the array
+        var randomLink = bluePillLinks[Math.floor(Math.random() * bluePillLinks.length)];
+
+        // Set the href attribute of the blue pill with the random link
+        document.getElementById("bluePill").href = randomLink;
+    </script>
+</body>
+</html>
