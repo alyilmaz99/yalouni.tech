@@ -1,1 +1,1 @@
-# yalova-uni
+# yalouni.tech 
