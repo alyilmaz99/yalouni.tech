@@ -3,12 +3,12 @@
 body {
     text-align: center;
     font-family: 'Cherry Swash';
-    /*Setting background image*/
+
 
     background-image: url('images/bg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Set the background image as fixed */
+    background-attachment: fixed;
 }
 
 .heading{
