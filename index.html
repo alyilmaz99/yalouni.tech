@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>YALO Selection</title>
-    <!-- Link to the external CSS file -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles-start.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles-start.css" />
+  </head>
+  <body>
     <center><div class="game-text">Choose a pill to continue...</div></center>
-    <center><img src="images/matrix.jpg" alt="Workplace" usemap="#workmap"></center>
+    <center>
+      <img src="images/matrix.jpg" alt="Workplace" usemap="#workmap" />
+    </center>
 
     <map name="workmap">
-        <area shape="rect" id="bluePill"  coords="115,310,134,331" alt="Blue Pill">
-        <area shape="rect" id="redPill"  coords="381,314,406,327" alt="Red Pill" href="https://bilgisayar.yalova.edu.tr/tr/Page/PersonelListesi/akademik-kadro">
+      <area
+        shape="rect"
+        id="redPill"
+        class="redPill"
+        coords="115,310,134,331"
+        alt="Red Pill"
+      />
+
+      <area
+        shape="rect"
+        id="bluePill"
+        coords="381,314,406,327"
+        alt="Blue Pill"
+        href="https://bilgisayar.yalova.edu.tr/tr/Page/PersonelListesi/akademik-kadro"
+      />
     </map>
 
     <script>
-        
-        var bluePillLinks = [
-                "https://www.youtube.com/watch?v=zCPabn1zGVE",
-                "https://www.youtube.com/watch?v=2YQIrlx6u8w",
-                "https://www.youtube.com/watch?v=Gdsd8xe0MnA",
-                "https://www.youtube.com/shorts/z-FjETMiwag",
-                "https://www.youtube.com/watch?v=Tyq4xO_hW4I",
-                "https://www.youtube.com/watch?v=QrXMNq9e-BQ",
-                "https://www.youtube.com/watch?v=sb1Arj_ZTAQ",
-                "https://www.youtube.com/watch?v=EGEETOvR4P8",
-                "https://www.youtube.com/watch?v=vVfQps7XkW8",
-                "https://www.youtube.com/watch?v=hGMgXsggorg",
-                "https://www.youtube.com/watch?v=8144l37GS-c",
-                "https://www.youtube.com/watch?v=-7cGOnFH0Kc",
-                "https://www.youtube.com/shorts/fmsB7euVkeI",
-                "https://www.youtube.com/watch?v=9hz9QVyzl3U",
-                "https://www.youtube.com/watch?v=bdUw6XvgMdA",
-                "https://www.youtube.com/watch?v=KaZbnYfvYbA",
-                "https://www.youtube.com/watch?v=iqHOT5jU3e8",
-                "https://www.youtube.com/watch?v=-dIvdJX8O8o",
-                "https://www.youtube.com/shorts/Y-_iJ5ioi10",
-                "https://www.youtube.com/watch?v=31smA4TRYv0",
-                "https://www.youtube.com/shorts/5X_479tf2cM",
-                "https://www.youtube.com/watch?v=FTesdXs2kKM",
-                "https://www.youtube.com/watch?v=qIAKrF_PhuI",
-                "https://www.youtube.com/watch?v=KfzJw0L_3To",
-                "https://www.youtube.com/watch?v=wbgbBB98S1c",
-                "https://www.youtube.com/watch?v=mqw446NS7W8",
-                "https://www.youtube.com/watch?v=FN-ylkLXmOc",
-                "https://www.youtube.com/watch?v=lhu6M5jNAJM",
-                "https://www.youtube.com/watch?v=ST_jZ8yfxm0",
-                "https://www.youtube.com/watch?v=MVAaQbf7N2Y",
-                "https://www.youtube.com/watch?v=e_-GUPWMFgU",
-                "https://www.youtube.com/watch?v=iygjPQ3ueh4",
-                "https://www.youtube.com/watch?v=Ztncx5AQv3g",
-                "https://www.youtube.com/shorts/qfxYLshMh_8",
-                "https://www.youtube.com/watch?v=R3ce9gP-THk",
-                "https://www.youtube.com/watch?v=hAhJIXS2lw8",
-                "https://www.youtube.com/watch?v=iQ3TBTIKnSs",
-                "https://www.youtube.com/watch?v=W85F-UmnbF4",
-                "https://www.youtube.com/watch?v=frjtW6QY_mY",
-                "https://www.youtube.com/watch?v=eeu8dsBc_6s",
-                "https://www.youtube.com/watch?v=43onkgHLUWg",
-                "https://www.youtube.com/shorts/Obgnr9pc820",
-                "https://www.youtube.com/watch?v=Mg991IWepRs",
-                "https://www.youtube.com/watch?v=kQndGCnt96w",
-                "https://www.youtube.com/watch?v=12pexBFxvuk",
-                "https://www.youtube.com/watch?v=fcawRJK0hLM",
-                "https://www.youtube.com/watch?v=CHFIOpWLYko",
-                "https://www.youtube.com/watch?v=TnD0zv00SOU",
-                "https://www.youtube.com/watch?v=a7JwyZuWEqA",
-                "https://www.youtube.com/watch?v=5XFrkVgXxQo",
-                "https://www.youtube.com/watch?v=WZ1nbSUzfF4",
-                "https://www.youtube.com/watch?v=0IpqOCMmgDU",
-                "https://www.youtube.com/watch?v=31l4fNgNuQ4",
-                "https://www.youtube.com/watch?v=_tYQbKWPE4Q",
-                "https://www.youtube.com/watch?v=S6Q_dy4_S5o",
-                "https://www.youtube.com/watch?v=t75441iujMg",
-                "https://www.youtube.com/watch?v=aiTHZDcDEbM",
-                "https://www.youtube.com/watch?v=KfCkvsSVxFU",
-                "https://www.youtube.com/watch?v=MKeVqOXRlH8",
-                "https://www.youtube.com/watch?v=k9Y9-xueg5M",
-                "https://www.youtube.com/shorts/Se60C9yJAc0",
-                "https://www.youtube.com/watch?v=d33TWaEDSpI",
-                "https://www.youtube.com/watch?v=oMOK1hQVugU",
-                
-                
-        ];
-        var randomLink = bluePillLinks[Math.floor(Math.random() * bluePillLinks.length)];
+      var redPillLinks = [
+        "https://www.youtube.com/watch?v=zCPabn1zGVE",
+        "https://www.youtube.com/watch?v=2YQIrlx6u8w",
+        "https://www.youtube.com/watch?v=Gdsd8xe0MnA",
+        "https://www.youtube.com/shorts/z-FjETMiwag",
+        "https://www.youtube.com/watch?v=Tyq4xO_hW4I",
+        "https://www.youtube.com/watch?v=QrXMNq9e-BQ",
+        "https://www.youtube.com/watch?v=sb1Arj_ZTAQ",
+        "https://www.youtube.com/watch?v=EGEETOvR4P8",
+        "https://www.youtube.com/watch?v=vVfQps7XkW8",
+        "https://www.youtube.com/watch?v=hGMgXsggorg",
+        "https://www.youtube.com/watch?v=8144l37GS-c",
+        "https://www.youtube.com/watch?v=-7cGOnFH0Kc",
+        "https://www.youtube.com/shorts/fmsB7euVkeI",
+        "https://www.youtube.com/watch?v=9hz9QVyzl3U",
+        "https://www.youtube.com/watch?v=bdUw6XvgMdA",
+        "https://www.youtube.com/watch?v=KaZbnYfvYbA",
+        "https://www.youtube.com/watch?v=iqHOT5jU3e8",
+        "https://www.youtube.com/watch?v=-dIvdJX8O8o",
+        "https://www.youtube.com/shorts/Y-_iJ5ioi10",
+        "https://www.youtube.com/watch?v=31smA4TRYv0",
+        "https://www.youtube.com/shorts/5X_479tf2cM",
+        "https://www.youtube.com/watch?v=FTesdXs2kKM",
+        "https://www.youtube.com/watch?v=qIAKrF_PhuI",
+        "https://www.youtube.com/watch?v=KfzJw0L_3To",
+        "https://www.youtube.com/watch?v=wbgbBB98S1c",
+        "https://www.youtube.com/watch?v=mqw446NS7W8",
+        "https://www.youtube.com/watch?v=FN-ylkLXmOc",
+        "https://www.youtube.com/watch?v=lhu6M5jNAJM",
+        "https://www.youtube.com/watch?v=ST_jZ8yfxm0",
+        "https://www.youtube.com/watch?v=MVAaQbf7N2Y",
+        "https://www.youtube.com/watch?v=e_-GUPWMFgU",
+        "https://www.youtube.com/watch?v=iygjPQ3ueh4",
+        "https://www.youtube.com/watch?v=Ztncx5AQv3g",
+        "https://www.youtube.com/shorts/qfxYLshMh_8",
+        "https://www.youtube.com/watch?v=R3ce9gP-THk",
+        "https://www.youtube.com/watch?v=hAhJIXS2lw8",
+        "https://www.youtube.com/watch?v=iQ3TBTIKnSs",
+        "https://www.youtube.com/watch?v=W85F-UmnbF4",
+        "https://www.youtube.com/watch?v=frjtW6QY_mY",
+        "https://www.youtube.com/watch?v=eeu8dsBc_6s",
+        "https://www.youtube.com/watch?v=43onkgHLUWg",
+        "https://www.youtube.com/shorts/Obgnr9pc820",
+        "https://www.youtube.com/watch?v=Mg991IWepRs",
+        "https://www.youtube.com/watch?v=kQndGCnt96w",
+        "https://www.youtube.com/watch?v=12pexBFxvuk",
+        "https://www.youtube.com/watch?v=fcawRJK0hLM",
+        "https://www.youtube.com/watch?v=CHFIOpWLYko",
+        "https://www.youtube.com/watch?v=TnD0zv00SOU",
+        "https://www.youtube.com/watch?v=a7JwyZuWEqA",
+        "https://www.youtube.com/watch?v=5XFrkVgXxQo",
+        "https://www.youtube.com/watch?v=WZ1nbSUzfF4",
+        "https://www.youtube.com/watch?v=0IpqOCMmgDU",
+        "https://www.youtube.com/watch?v=31l4fNgNuQ4",
+        "https://www.youtube.com/watch?v=_tYQbKWPE4Q",
+        "https://www.youtube.com/watch?v=S6Q_dy4_S5o",
+        "https://www.youtube.com/watch?v=t75441iujMg",
+        "https://www.youtube.com/watch?v=aiTHZDcDEbM",
+        "https://www.youtube.com/watch?v=KfCkvsSVxFU",
+        "https://www.youtube.com/watch?v=MKeVqOXRlH8",
+        "https://www.youtube.com/watch?v=k9Y9-xueg5M",
+        "https://www.youtube.com/shorts/Se60C9yJAc0",
+        "https://www.youtube.com/watch?v=d33TWaEDSpI",
+        "https://www.youtube.com/watch?v=oMOK1hQVugU",
+      ];
+      function handleRedPillClick() {
+        var randomLink =
+          redPillLinks[Math.floor(Math.random() * redPillLinks.length)];
+        window.location.href = randomLink;
+      }
 
-        document.getElementById("bluePill").href = randomLink;
+      document
+        .getElementById("redPill")
+        .addEventListener("click", handleRedPillClick);
     </script>
-</body>
+  </body>
 </html>

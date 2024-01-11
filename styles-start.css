@@ -1,26 +1,27 @@
 .game-text {
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 24px;
-    color: red;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 24px;
+  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
 
 area {
-    display: block;
-    transition: all 0.3s ease; 
+  display: block;
+  transition: all 0.3s ease;
 }
 
 #bluePill:hover {
-    transform: scale(10.0); 
-    filter: brightness(2.5); 
+  transform: scale(10);
+  filter: brightness(2.5);
 }
 
 #redPill:hover {
-    transform: scale(1.1);
-    filter: brightness(2.5); 
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: brightness(2.5);
 }
